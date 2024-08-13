@@ -29,8 +29,19 @@
 
         img{
             width: 100%;
-            height: 120px;
+            height: 240px;
             object-fit: cover;
+        }
+    }
+
+}
+
+@include v.tab{
+
+    .p-grid{
+        
+        img{
+            height: 120px;
         }
     }
 

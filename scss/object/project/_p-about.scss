@@ -8,9 +8,13 @@
     }
     
 }
-iframe{
+.c-tab{
+    display: block;
     max-width: 300px;
     height: auto;
+}
+.c-pc{
+    display:none;
 }
 .p-sns{
     display: flex;
@@ -38,7 +42,19 @@ iframe{
         }
     }
 
-    iframe{
+    .c-tab{
+        display:block;
         max-width: 500px;
     }
+}
+
+@include v.pc{
+    .c-pc{
+        display: block;
+    }
+
+    .c-tab{
+        display:none;
+    }
+   
 }
