@@ -1,0 +1,44 @@
+@use "../../foundation/variables" as v;
+
+.p-infomation{
+    margin:30px 0;
+    td{
+        padding:5px;
+        font-size: 0.8rem;
+    }
+    
+}
+iframe{
+    max-width: 300px;
+    height: auto;
+}
+.p-sns{
+    display: flex;
+    align-items: center;
+    font-size:1.5rem;
+    margin:20px 0;
+
+    .c-icon{
+        width: 50px;
+        height: 50px;
+        margin:20px;
+    }
+}
+.c-sns-content{
+    max-width: 300px;
+    height: auto;
+    margin:5%;
+}
+
+@include v.tab{
+    .p-infomation{
+        td{
+            padding:20px;
+            font-size: 1rem;
+        }
+    }
+
+    iframe{
+        max-width: 500px;
+    }
+}

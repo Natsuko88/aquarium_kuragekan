@@ -1,0 +1,7 @@
+@use "../../foundation/variables" as v;
+
+.p-footer{
+    background-color: v.$color-black;
+    text-align: center;
+    bottom:-200px;
+}

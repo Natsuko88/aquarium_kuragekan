@@ -1,0 +1,23 @@
+//foundation
+@use "foundation/base";
+@use "foundation/variables";
+//layout
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+
+//project
+@use "object/project/p-header";
+@use "object/project/p-tophead";
+@use "object/project/p-picup";
+@use "object/project/p-map";
+@use "object/project/p-about";
+@use "object/project/p-footer";
+@use "object/project/p-modal";
+
+//component
+@use "object/component/c-sec-title";
+@use "object/component/c-wrapper";
+@use "object/component/c-contents-title";
+@use "object/component/c-kurage";
+

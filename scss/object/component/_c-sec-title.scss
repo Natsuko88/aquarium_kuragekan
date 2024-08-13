@@ -1,0 +1,14 @@
+@use "../../foundation/variables" as v;
+
+.c-sec-teitle{
+    text-align: center;
+    font-weight: bold;
+    padding:7% 3%;
+    font-size: 1.5rem;
+}
+
+@include v.tab{
+    .c-sec-teitle{
+        font-size: 2rem;
+    }
+}

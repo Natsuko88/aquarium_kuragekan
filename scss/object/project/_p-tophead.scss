@@ -1,0 +1,34 @@
+@use "../../foundation/variables" as v;
+
+.p-tophead{
+    background:url(../../../img/img08.jpeg);
+    width:100%;
+    height:350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position:relative;
+
+    .u-sec-title{
+        position:absolute;
+        bottom:20%;
+        font-size: 1.5rem;
+    }    
+}
+
+@include v.tab{
+    .p-tophead{
+        height:500px;
+        .u-sec-title{
+            font-size: 2rem;
+        }    
+    }
+}
+@include v.pc{
+    .p-tophead{
+        height:700px;
+        .u-sec-title{
+            font-size: 3rem;
+        }    
+    }
+}

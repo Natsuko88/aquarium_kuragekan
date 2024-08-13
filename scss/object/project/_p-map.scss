@@ -1,0 +1,37 @@
+@use "../../foundation/variables" as v;
+
+.p-map{
+    .c-kurage{
+        right:50%;
+        left:0;
+    }
+    .c-sec-teitle{
+        flex-direction: row-reverse;
+        img{
+            margin:0 50px;
+        }
+        
+    }
+    .p-mapimg{
+        max-width:900px;
+        height: auto;
+
+        img{
+            width: 100%;
+        }
+    }
+    //モーダル
+    
+    .p-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+        gap:20px;
+
+        img{
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+    }
+
+}

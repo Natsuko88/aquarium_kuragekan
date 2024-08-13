@@ -1,0 +1,337 @@
+@charset "UTF-8";
+body {
+  background-color: #043174;
+  color: #ffffff;
+  font-family: "Noto serif JP";
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.l-header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.l-main {
+  position: relative;
+  top: 80px;
+  z-index: 1;
+}
+
+.l-footer {
+  width: 100%;
+  position: absolute;
+}
+
+.p-header {
+  background-color: #043174;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.p-header .c-site-title {
+  padding: 2%;
+  font-size: 20px;
+}
+.p-header img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 480px) {
+  .c-site-title {
+    padding: 2%;
+    font-size: 28px;
+  }
+}
+.p-tophead {
+  background: url(../../../img/img08.jpeg);
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.p-tophead .u-sec-title {
+  position: absolute;
+  bottom: 20%;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .p-tophead {
+    height: 500px;
+  }
+  .p-tophead .u-sec-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-tophead {
+    height: 700px;
+  }
+  .p-tophead .u-sec-title {
+    font-size: 3rem;
+  }
+}
+.p-picup .p-contents-picup {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 10%;
+  gap: 50px;
+}
+.p-picup .p-contents-picup figure {
+  width: 240px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-picup .p-contents-picup figure img {
+  width: 240px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+}
+.p-picup .p-contents-picup .p-contents-picup--article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p-picup .p-contents-picup .p-contents-picup--article .c-content {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 480px) {
+  .p-picup .p-contents-picup {
+    flex-direction: row;
+  }
+  .p-picup .p-contents-picup:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .p-picup .p-contents-picup figure {
+    width: 320px;
+    height: 240px;
+  }
+  .p-picup .p-contents-picup figure img {
+    width: 320px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-picup .p-contents-picup figure {
+    width: 400px;
+  }
+  .p-picup .p-contents-picup figure img {
+    width: 400px;
+    height: 300px;
+  }
+}
+.p-map .c-kurage {
+  right: 50%;
+  left: 0;
+}
+.p-map .c-sec-teitle {
+  flex-direction: row-reverse;
+}
+.p-map .c-sec-teitle img {
+  margin: 0 50px;
+}
+.p-map .p-mapimg {
+  max-width: 900px;
+  height: auto;
+}
+.p-map .p-mapimg img {
+  width: 100%;
+}
+.p-map .p-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.p-map .p-grid img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-infomation {
+  margin: 30px 0;
+}
+.p-infomation td {
+  padding: 5px;
+  font-size: 0.8rem;
+}
+
+iframe {
+  max-width: 300px;
+  height: auto;
+}
+
+.p-sns {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.p-sns .c-icon {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.c-sns-content {
+  max-width: 300px;
+  height: auto;
+  margin: 5%;
+}
+
+@media screen and (min-width: 480px) {
+  .p-infomation td {
+    padding: 20px;
+    font-size: 1rem;
+  }
+  iframe {
+    max-width: 500px;
+  }
+}
+.p-footer {
+  background-color: #000000;
+  text-align: center;
+  bottom: -200px;
+}
+
+.p-modal .p-modal__bg {
+  position: fixed;
+  z-index: 10009;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0; /* 初期状態で非表示 */
+  visibility: hidden; /* 初期状態で非表示 */
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.p-modal .p-modal__bg.is-active {
+  opacity: 1; /* 非表示を解除 */
+  visibility: visible; /* 非表示を解除 */
+}
+.p-modal .p-modal__inner {
+  position: fixed;
+  z-index: 10010;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 10px;
+  opacity: 0; /* 初期状態で非表示 */
+  visibility: hidden; /* 初期状態で非表示 */
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.p-modal .p-modal__inner.is-active {
+  opacity: 1; /* 非表示を解除 */
+  visibility: visible; /* 非表示を解除 */
+}
+.p-modal .p-modal-card {
+  width: 700px;
+  min-height: 290px;
+  background: #ffffff;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  z-index: 1;
+  transform: translate3d(0, 48px, 0);
+  opacity: 0; /* 初期状態で非表示 */
+  visibility: hidden; /* 初期状態で非表示 */
+  transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.3s ease-in-out;
+}
+.p-modal .p-modal-card.is-active {
+  position: relative;
+  z-index: 2;
+  opacity: 1; /* 非表示を解除 */
+  visibility: visible; /* 非表示を解除 */
+  transform: translate3d(0, 0, 0);
+}
+.p-modal .c-modal-card__heading {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #000000;
+}
+.p-modal .c-modal-card__img {
+  margin: 0;
+  max-width: 600px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-modal .c-modal-card__close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 16px;
+  right: 13px;
+}
+.p-modal .c-modal-card__close::before,
+.p-modal .c-modal-card__close::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 3px;
+  background: #043174;
+  cursor: pointer;
+}
+.p-modal .c-modal-card__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.p-modal .c-modal-card__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.c-sec-teitle {
+  text-align: center;
+  font-weight: bold;
+  padding: 7% 3%;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .c-sec-teitle {
+    font-size: 2rem;
+  }
+}
+.c-wrapper {
+  margin: 3% 15%;
+}
+
+.c-contents-title {
+  text-align: center;
+  margin: 20px;
+}
+
+.c-kurage {
+  width: 50%;
+  text-align: end;
+  position: absolute;
+  left: 50%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,20 @@
+//color
+$color-blue:#043174;
+$color-white:#ffffff;
+$color-black:#000000;
+
+//breakPoint
+$PC:1025px;
+$tab:480px;
+
+@mixin pc{
+    @media screen and(min-width:($PC)){
+        @content;
+    }
+}
+
+@mixin tab{
+    @media screen and(min-width:($tab)){
+        @content;
+    }
+}
